@@ -1,0 +1,28 @@
+On VS Code 
+
+Terminal Commands to Start:
+1. Compile the code: g++ main.cpp MedicineBatch.cpp -o pharmacy
+2. Run the program: ./pharmacy
+
+Live Demonstration Script (FEFO Logic)
+
+1. Add the Inventory (Option 1)
+Add these three batches exactly as shown to prove the system sorts them by expiration date, not by the order they were added.
+Type 1 -> Paracetamol B-101 50 12 2027
+Type 1 -> Paracetamol B-102 100 05 2027 (This expires first)
+Type 1 -> Paracetamol B-103 30 01 2028 (This expires last)
+
+2. Verify Sorting (Option 3)
+Type 3 to view the stock.
+Point out to your evaluator that B-102 is at the very top of the list because it expires first (May 2027), automatically applying the First-Expire-First-Out rule.
+
+3. Demonstrate the Auto-Issue (Option 2)
+Type 2 and issue 120 pills: Paracetamol 120
+The terminal will show it pulling exactly 100 from B-102 (emptying the oldest batch) and the remaining 20 from B-101.
+
+4. Final Proof (Option 3)
+Type 3 to view the stock one last time.
+Show that B-102 has been completely removed from the system and B-101 now only has 30 pills left.
+
+5. Type 4 to exit 
+
